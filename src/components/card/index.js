@@ -1,9 +1,11 @@
 import React, { useState, useContext, createContext } from 'react';
 import { Container, Title, Center, Cocktail, ContainerImage, Image, Footer } from './styles/card';
 
-function Card({ children, ...restProps }) {
-	return (
 
+function Card({ children, ...restProps }) {
+
+	return (
+		
 		<Container { ...restProps }>
 			{ children }
 		</Container>

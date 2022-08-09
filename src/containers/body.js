@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Search } from '../components';
 import { Card } from '../components';
+import { FeatureContext } from '../context/feature';
+
 
 export function BodyContainer({  }) {
+
+	const { cocktails } = useContext(FeatureContext);
+	console.log(cocktails);
+
 	return(
 		<>
 			<Search>
