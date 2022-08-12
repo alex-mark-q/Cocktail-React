@@ -51,3 +51,21 @@ export const Image = styled.img`
 export const Footer = styled.div`
   padding: 1.5rem;
 `;
+
+export const Text = styled.p`
+  color: var(--darkGrey);
+  margin-bottom: 0.5rem;
+`;
+
+export const SubTitle = styled.h3`
+  font-family: var(--slantedFont);
+  margin-bottom: 0.3rem;
+  letter-spacing: var(--mainSpacing);
+  font-size: 2rem;
+`;
+
+export const Description = styled.h4`
+  margin-bottom: 0.3rem;
+  font-family: var(--slantedFont);
+  letter-spacing: var(--mainSpacing);
+`;
