@@ -17,11 +17,6 @@ export function BodyContainer() {
 		// setSearchResults(results);
   // }, [searchTerm]);
 
-  // const filter = (obj) => {
-  // 	cocktails.filter(cocktail =>
-  //     cocktail.name.toLowerCase().includes(searchTerm)
-  //   );
-  // } 
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -34,7 +29,6 @@ export function BodyContainer() {
   const handleChange = e => {
     setSearchTerm(e.target.value);
   };
-  // console.log('searchTerm ', cocktails, searchResults);
 
 	return(
 		<>
