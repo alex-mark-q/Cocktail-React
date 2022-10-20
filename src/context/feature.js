@@ -6,7 +6,7 @@ export function FeatureProvider({ children }) {
 
 	const [loading, setLoading] = useState(false);
 	const [cocktails, setCocktails] = useState([]);
-  const [searchVal, setSearchVal] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
 
 	const fetchDrinks = useCallback( async () => {
@@ -43,15 +43,15 @@ export function FeatureProvider({ children }) {
       console.error(error);
       setLoading(false);
     }
-  },[searchVal]);
+  },[searchTerm]);
 
 	useEffect(() => {
 		fetchDrinks();
-	}, [searchVal]);
+	}, [searchTerm]);
 
 	return(
 
-		<FeatureContext.Provider value = {{ cocktails, loading, searchVal, setSearchVal }}>
+		<FeatureContext.Provider value = {{ cocktails, loading, searchTerm, setSearchTerm }}>
 			{children}
 		</FeatureContext.Provider>
 	)

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container, Form, Control, InputLabel, InputField } from './styles/search';
-
+import { FeatureContext } from '../../context/feature';
 
 function Search({ children, ...restProps }) {
 	return(
@@ -24,8 +24,17 @@ Search.InputLabel = function SearchLabel({ children, ...restProps }) {
   return <InputLabel {...restProps}>{ children }</InputLabel>;
 };
 
-Search.InputField = function SearchField({ children, ...restProps }) {
-  return <InputField  {...restProps} />;
+Search.InputField = function SearchField({ searchTerm, handleChange, ...restProps }) {
+
+  return (
+    <InputField
+      type="text" 
+      placeholder="Search" 
+      value = {searchTerm} 
+      onChange = {handleChange}
+    />
+
+  )
 }
 
 export default Search;
